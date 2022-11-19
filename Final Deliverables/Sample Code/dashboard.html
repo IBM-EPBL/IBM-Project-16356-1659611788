@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- bootstrap for the cards -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <style>
+            .body{
+                padding: 50px;
+            }
+            .content {
+                padding: 100px;
+            }
+            .color{
+                color: black;
+                background-color: white;
+            }
+            .weight{
+                font-weight: bold;
+                background-color: white;
+            }
+    </style>
+
+  </head> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <div class="container-fluid" >
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="background-color: #B2D3C2">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100" style="color:black">
+                    <p class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline" style="color:black; font-weight: bold;">Personal Expense Tracker</span>
+                        <img src="bank.png" style="width:50px;height: 50px;">
+                    </p>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item mt-2" style="background-color:#00AD83; height: 50px; width: 150px; border-radius: 5px;">
+                            <a href="dashboard" class="nav-link align-middle px-0" style="color:black;">
+                               <span class="ms-1 d-none d-sm-inline">Home</span>
+                               <img src="house-outline.svg" style="width:20px;height:20px;margin-left: 5px;">
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a href="addexpense" class="nav-link px-0 align-middle" style="color:black;">
+                                <span class="ms-1 d-none d-sm-inline">Add Expense</span>
+                                <img src="pay.png" style="width:20px;height:20px;margin-left: 5px;">
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a href="modifyexpense" class="nav-link px-0 align-middle" style="color:black;">
+                                <span class="ms-1 d-none d-sm-inline">Modify Expense</span>
+                                <img src="edit_icon.svg" style="width:20px;height:20px;margin-left: 5px;">
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a href="analysis" class="nav-link px-0 align-middle" style="color:black;">
+                                <span class="ms-1 d-none d-sm-inline">View Analysis</span>
+                                <img src="graph.png" style="width:20px;height:20px;margin-left: 5px;">
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a href="rewards" class="nav-link px-0 align-middle" style="color:black;">
+                                <span class="ms-1 d-none d-sm-inline">Rewards & Goals</span>
+                                <img src="reward.png" style="width:20px;height:20px;margin-left: 5px;">
+                            </a>
+                        </li>                        
+                        <li class="nav-item mt-2">
+                            <a href="addcategory" class="nav-link px-0 align-middle" style="color:black;">
+                                <span class="ms-1 d-none d-sm-inline">Create category</span>
+                                <img src="category_add.webp" style="width:20px;height:20px;margin-left: 5px;">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col py-3" style="background-color:#00AD83">
+                <h3 style="color:black; text-align: center; margin-left: -300px;">Welcome Back! </h3>
+                <div class="d-flex justify-content-end">
+                    <h3>Wallet Balance: <span><h5 style="display:inline"><i>Rs.25000</i></h5></span></h3>
+                    <a href="updatebalance"><img src="edit_pencil.png"
+                        style="margin-left:5px; height: 30px; width:30px"></a>
+                </div>
+                <h3>Here are your expenses:</h3>
+                <div class="body">
+                    <table align="center" border="0" cellpadding="2" cellspacing="2" class="table table-striped" class="content">
+                        <tr class="weight">
+                            <td>CATEGORY</td>
+                            <td>EXPENSES</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td>Rs.5000</td>
+                        </tr>
+                        <tr>
+                            <td>Clothing</td>
+                            <td>Rs.2000</td>
+                        </tr>
+                        <tr>
+                            <td>House Rent</td>
+                            <td>Rs.10000</td>
+                        </tr>
+                        <tr>
+                            <td>Electricity Bill</td>
+                            <td>Rs.2500</td>
+                        </tr>
+                        <tr>
+                            <td>Travel</td>
+                            <td>Rs.3000</td>
+                        </tr>
+                        <tr class="weight">
+                            <td>Total</td>
+                            <td>Rs.22500</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>
